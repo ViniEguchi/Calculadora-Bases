@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>teste de conversão</h1>
+
+    Numero: <input type="text" id="ipt_numero"> <br> <br>
+
+    <h3>Qual a base desse numero?</h3>
+
+    <button onclick="base10()">Decimal</button> <br>
+    <button onclick="base2()">Binario</button> <br>
+    <button onclick="base8()">Octal</button> <br>
+    <button onclick="base16()">Hexadecimal</button>
+    
+    <br> <br>
+<b></b>
+    <div id="div_numero"></div>
+</body>
+
+<script>
+    function base10() {
+        var decimal = Number(ipt_numero.value);
+        var binario = decimal.toString(2);
+        var octal = decimal.toString(8);
+        var hexa = decimal.toString(16);
+
+        div_numero.innerHTML = ` 
+        <b> Binario = ${binario} <br>
+        Octal = ${octal} <br>
+        Hexadecimal = ${hexa} </b>
+        `
+    }
+
+    function base2() {
+        var binario = ipt_numero.value;
+        var decimal = parseInt(binario, 2);
+        var octal = decimal.toString(8);
+        var hexa = decimal.toString(16);
+
+        div_numero.innerHTML = `
+        <b> Decimal = ${decimal} <br>
+        Octal = ${octal} <br>
+        Hexadecimal = ${hexa} </b>
+        `
+    }
+
+    function base8() {
+        var octal = ipt_numero.value;
+        var decimal = parseInt(octal, 8);
+        var binario = decimal.toString(2);
+        var hexa = decimal.toString(16);
+
+        div_numero.innerHTML = `
+        <b> Decimal = ${decimal} <br>
+        Binario = ${binario} <br>
+        Hexadecimal = ${hexa} </b>
+        `
+    }
+
+    function base16() {
+        var hexa = ipt_numero.value;
+        var decimal = parseInt(hexa, 16)
+        var octal = decimal.toString(8)
+        var binario = decimal.toString(2)
+
+        div_numero.innerHTML = `
+        <b> Decimal = ${decimal} <br>
+        Binario = ${binario} <br>
+        Octal = ${octal} </b>
+        `
+    }
+</script>
+
+</html>
