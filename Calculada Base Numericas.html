@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
+
 <body>
-    <h1>teste de conversão</h1>
+    <div id="container">
+        <div id="titulo">
+            <h1>Tabela de conversão</h1>
+        </div>
+        Número: <input type="text" id="ipt_numero"> <br> <br>
 
-    Numero: <input type="text" id="ipt_numero"> <br> <br>
+        <h3>Qual a base desse numero?</h3>
 
-    <h3>Qual a base desse numero?</h3>
+        <div id="button">
+            <button class="botao" onclick="base10()">Decimal</button> <br>
+            <button class="botao" onclick="base2()">Binario</button> <br>
+            <button class="botao" onclick="base8()">Octal</button> <br>
+            <button class="botao" onclick="base16()">Hexadecimal</button>
+        </div>
 
-    <button onclick="base10()">Decimal</button> <br>
-    <button onclick="base2()">Binario</button> <br>
-    <button onclick="base8()">Octal</button> <br>
-    <button onclick="base16()">Hexadecimal</button>
-    
-    <br> <br>
-<b></b>
-    <div id="div_numero"></div>
+        <br> <br>
+        <b></b>
+        <div id="div_numero"></div>
+    </div>
 </body>
 
 <script>

@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./img/backgroundimage.webp);
+    background-size: cover;
+}
+
+#button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botao {
+    height: 60px;
+    width: 150px;
+    margin-top: 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+    background-color: #ffffff;
+
+
+}
+
+.botao:hover {
+    transition: all 0.5s ease-in-out;
+    height: 80px;
+    width: 170px;
+    opacity: 0.9;
+
+}
+
+#ipt_numero {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#titulo {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+#container {
+    animation: fadeInLeftBig;
+    animation-duration: 1s;
+}
