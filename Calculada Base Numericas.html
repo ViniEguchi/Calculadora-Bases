@@ -47,7 +47,7 @@
         var hexa = decimal.toString(16);
 
         
-        if (isNaN(binario) || isNaN(octal) || isNaN(hexa)) {
+        if (isNaN(decimal)) {
             div_numero.innerHTML = `ERROR. Número ou base incorreto.`
         } else {
             div_numero.innerHTML = ` 
@@ -64,7 +64,7 @@
         var octal = decimal.toString(8);
         var hexa = decimal.toString(16);
 
-        if (isNaN(decimal) || isNaN(octal) || isNaN(hexa)) {
+        if (isNaN(decimal) || isNaN(octal) || isNaN(binario)) {
             div_numero.innerHTML = `ERROR. Número ou base incorreto.`
         } else {
             div_numero.innerHTML = `
@@ -76,12 +76,12 @@
     }
 
     function base8() {
-        var octal = ipt_numero.value;
+        var octal = Number(ipt_numero.value);
         var decimal = parseInt(octal, 8);
         var binario = decimal.toString(2);
         var hexa = decimal.toString(16);
 
-        if (isNaN(binario) || isNaN(decimal) || isNaN(hexa)) {
+        if (isNaN(binario) || isNaN(decimal) || isNaN(octal)) {
             div_numero.innerHTML = `ERROR. Número ou base incorreto.`
         } else {
             div_numero.innerHTML = `
