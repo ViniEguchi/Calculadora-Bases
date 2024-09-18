@@ -46,11 +46,16 @@
         var octal = decimal.toString(8);
         var hexa = decimal.toString(16);
 
-        div_numero.innerHTML = ` 
-        <b> Binario = ${binario} <br>
-        Octal = ${octal} <br>
-        Hexadecimal = ${hexa} </b>
-        `
+        
+        if (isNaN(binario) || isNaN(octal) || isNaN(hexa)) {
+            div_numero.innerHTML = `ERROR. Número ou base incorreto.`
+        } else {
+            div_numero.innerHTML = ` 
+            <b> Binario = ${binario} <br>
+            Octal = ${octal} <br>
+            Hexadecimal = ${hexa} </b>
+            `
+        }
     }
 
     function base2() {
@@ -59,11 +64,15 @@
         var octal = decimal.toString(8);
         var hexa = decimal.toString(16);
 
-        div_numero.innerHTML = `
-        <b> Decimal = ${decimal} <br>
-        Octal = ${octal} <br>
-        Hexadecimal = ${hexa} </b>
-        `
+        if (isNaN(decimal) || isNaN(octal) || isNaN(hexa)) {
+            div_numero.innerHTML = `ERROR. Número ou base incorreto.`
+        } else {
+            div_numero.innerHTML = `
+            <b> Decimal = ${decimal} <br>
+            Octal = ${octal} <br>
+            Hexadecimal = ${hexa} </b>
+            `
+        }
     }
 
     function base8() {
@@ -72,11 +81,15 @@
         var binario = decimal.toString(2);
         var hexa = decimal.toString(16);
 
-        div_numero.innerHTML = `
-        <b> Decimal = ${decimal} <br>
-        Binario = ${binario} <br>
-        Hexadecimal = ${hexa} </b>
-        `
+        if (isNaN(binario) || isNaN(decimal) || isNaN(hexa)) {
+            div_numero.innerHTML = `ERROR. Número ou base incorreto.`
+        } else {
+            div_numero.innerHTML = `
+            <b> Decimal = ${decimal} <br>
+            Binario = ${binario} <br>
+            Hexadecimal = ${hexa} </b>
+            `
+        }
     }
 
     function base16() {
@@ -85,11 +98,15 @@
         var octal = decimal.toString(8)
         var binario = decimal.toString(2)
 
-        div_numero.innerHTML = `
-        <b> Decimal = ${decimal} <br>
-        Binario = ${binario} <br>
-        Octal = ${octal} </b>
-        `
+        if (isNaN(binario) || isNaN(octal) || isNaN(decimal)) {
+            div_numero.innerHTML = `ERROR. Número ou base incorreto.`
+        } else {
+            div_numero.innerHTML = `
+            <b> Decimal = ${decimal} <br>
+            Binario = ${binario} <br>
+            Octal = ${octal} </b>
+            `
+        }
     }
 </script>
 
