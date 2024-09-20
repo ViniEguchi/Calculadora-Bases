@@ -20,7 +20,7 @@
 <body>
     <div id="container">
         <div id="titulo">
-            <h1>Conversão de Sistemas Numéricos</h1>
+            <h1>Conversão de Sistemas Numéricos</h1>₢
         </div>
         Número: <input type="text" id="ipt_numero"> <br> <br>
 
@@ -40,11 +40,16 @@
 </body>
 
 <script>
+    var decimal = 0
+    var binario = 0
+    var octal = 0
+    var hexa = 0
+
     function base10() {
-        var decimal = Number(ipt_numero.value);
-        var binario = decimal.toString(2);
-        var octal = decimal.toString(8);
-        var hexa = decimal.toString(16);
+        decimal = Number(ipt_numero.value);
+        binario = decimal.toString(2);
+        octal = decimal.toString(8);
+        hexa = decimal.toString(16);
 
         
         if (isNaN(decimal)) {
@@ -59,12 +64,14 @@
     }
 
     function base2() {
-        var binario = ipt_numero.value;
-        var decimal = parseInt(binario, 2);
-        var octal = decimal.toString(8);
-        var hexa = decimal.toString(16);
+        binario = ipt_numero.value;
+        decimal = parseInt(binario, 2);
+        octal = decimal.toString(8);
+        hexa = decimal.toString(16);
 
         if (isNaN(decimal) || isNaN(octal) || isNaN(binario)) {
+            div_numero.innerHTML = `ERROR. Número ou base incorreto.`
+        } else if(binario > 1 && (decimal == 1 || octal == 1 || hexa == 1)) {
             div_numero.innerHTML = `ERROR. Número ou base incorreto.`
         } else {
             div_numero.innerHTML = `
@@ -76,12 +83,14 @@
     }
 
     function base8() {
-        var octal = Number(ipt_numero.value);
-        var decimal = parseInt(octal, 8);
-        var binario = decimal.toString(2);
-        var hexa = decimal.toString(16);
+        octal = Number(ipt_numero.value);
+        decimal = parseInt(octal, 8);
+        binario = decimal.toString(2);
+        hexa = decimal.toString(16);
 
-        if (isNaN(binario) || isNaN(decimal) || isNaN(octal)) {
+        if (octal > 1 && (decimal == 1 || hexa == 1 || binario == 1)) {
+            div_numero.innerHTML = `ERROR. Número ou base incorreto.`
+        } else if (isNaN(decimal) || isNaN(binario)) {
             div_numero.innerHTML = `ERROR. Número ou base incorreto.`
         } else {
             div_numero.innerHTML = `
@@ -93,12 +102,14 @@
     }
 
     function base16() {
-        var hexa = ipt_numero.value;
-        var decimal = parseInt(hexa, 16)
-        var octal = decimal.toString(8)
-        var binario = decimal.toString(2)
+        hexa = ipt_numero.value;
+        decimal = parseInt(hexa, 16)
+        octal = decimal.toString(8)
+        binario = decimal.toString(2)
 
         if (isNaN(binario) || isNaN(octal) || isNaN(decimal)) {
+            div_numero.innerHTML = `ERROR. Número ou base incorreto.`
+        } else if(hexa > 1 && (decimal == 1 || octal == 1 || binario == 1)) {
             div_numero.innerHTML = `ERROR. Número ou base incorreto.`
         } else {
             div_numero.innerHTML = `
