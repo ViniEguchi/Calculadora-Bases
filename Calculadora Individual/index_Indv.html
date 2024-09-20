@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Individual</title>
+
+    <script src="script_Indv.js" type="text/Javascript"></script>
+
+    <link rel="stylesheet" href="style_Indv.css">
+</head>
+<body>
+    <h1>Calculadora Conversão Bases Numéricas</h1>
+
+    <div class="center">
+        <div class="quebra_Linha">
+            <span>Número:</span> <input type="text" id="ipt_numero">
+        </div>
+        
+        <div class="quebra_Linha">
+            <label for="Numero">Qual a base desse numero?</label>
+            <select id="ipt_base" name="Numero">
+                <option value="decimal">Decimal</option>
+                <option value="binario">Binario</option>
+                <option value="octal">Octal</option>
+                <option value="hexadecimal">Hexadecimal</option>
+            </select>
+        </div>
+    </div>
+
+    <button onclick="converter()">Converter Base</button>
+</body>
+</html>

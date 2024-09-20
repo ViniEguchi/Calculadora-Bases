@@ -79,7 +79,7 @@
             Octal = ${octal} <br>
             Hexadecimal = ${hexa} </b>
             `
-        }
+        } // oi
     }
 
     function base8() {
@@ -87,11 +87,18 @@
         decimal = parseInt(octal, 8);
         binario = decimal.toString(2);
         hexa = decimal.toString(16);
+        
+        if (/[^0-7]/.test(octal)) {
+            alert(`teste`);
+            return
+        }
 
         if (octal > 1 && (decimal == 1 || hexa == 1 || binario == 1)) {
             div_numero.innerHTML = `ERROR. Número ou base incorreto.`
         } else if (isNaN(decimal) || isNaN(binario)) {
             div_numero.innerHTML = `ERROR. Número ou base incorreto.`
+        } else if (/[^0-7]/.test(octal)) {
+            alert(`teste`);
         } else {
             div_numero.innerHTML = `
             <b> Decimal = ${decimal} <br>

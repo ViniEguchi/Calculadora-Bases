@@ -1,0 +1,25 @@
+body {
+    font-family: monospace;
+    font-size: 15px;
+    text-align: center;
+}
+
+.quebra_linha {
+    display: block;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+select {
+    width: 177px;
+    height: 21px;
+}
+
+button {
+    border-radius: 10px;
+    padding: 10px;
+}
+
