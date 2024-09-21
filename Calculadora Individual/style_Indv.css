@@ -4,13 +4,22 @@ body {
     text-align: center;
 }
 
-.quebra_linha {
-    display: block;
+header {
+    height: 150px;
 }
 
-.center {
-    align-items: center;
-    justify-content: center;
+.quebra_linha {
+    display: block;
+    text-align: end;
+}
+
+.resultado {
+    max-width: fit-content;
+}
+
+.separar {
+    display: inline;
+    line-break: normal;
 }
 
 select {
@@ -21,5 +30,6 @@ select {
 button {
     border-radius: 10px;
     padding: 10px;
+    margin: 20px;
 }
 
