@@ -1,25 +1,46 @@
 body {
     font-family: monospace;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 header {
-    height: 150px;
+    height: 80px;
 }
 
-.quebra_linha {
-    display: block;
-    text-align: end;
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: solid 2px aliceblue;
+    border-radius: 25px;
+    width: 300px;
+    padding-bottom: 20px;
+    align-items: center;
+    margin-left: 40%;
+    margin-right: 40%;
 }
 
-.resultado {
-    max-width: fit-content;
+.item1 {
+    order: 1;
+    margin-top: 20px;
 }
 
-.separar {
-    display: inline;
-    line-break: normal;
+.item2 {
+    order: 2;
+}
+
+.Resposta {
+    order: 4;
+}
+
+.rodape {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 select {
@@ -31,5 +52,9 @@ button {
     border-radius: 10px;
     padding: 10px;
     margin: 20px;
+    order: 3;
 }
 
+h1 {
+    font-size: 30px !important;
+}
